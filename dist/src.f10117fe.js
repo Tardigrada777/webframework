@@ -1881,6 +1881,16 @@ function () {
     });
   };
 
+  User.prototype.save = function () {
+    var id = this.get('id');
+
+    if (id) {
+      axios_1["default"].put("http://localhost:3000/users/" + id, this.data);
+    } else {
+      axios_1["default"].post('http://localhost:3000/users', this.data);
+    }
+  };
+
   return User;
 }();
 
@@ -1893,9 +1903,10 @@ exports.__esModule = true;
 var User_1 = require("./models/User");
 
 var user = new User_1.User({
-  id: 1
+  name: 'NEW NAME',
+  age: 0
 });
-user.fetch();
+user.save();
 console.log(user);
 },{"./models/User":"src/models/User.ts"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
