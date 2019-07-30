@@ -2,28 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "John",
-      "age": 25
-    },
-    {
-      "name": "NEW NAME",
-      "age": 0,
-      "id": 2
-    },
-    {
-      "name": "NEW NAME",
-      "age": 0,
-      "id": 3
-    },
-    {
-      "name": "NEW NAME",
-      "age": 0,
-      "id": 4
-    },
-    {
-      "name": "NEW NAME",
-      "age": 0,
-      "id": 5
+      "name": "Newwer name",
+      "age": 0
     }
   ]
 }

@@ -1,11 +1,13 @@
-import { User, UserProps } from './models/User';
-import { Attributes } from './models/Attributes';
+import { User } from './models/User';
 
-// const user = new User({ name: 'NEW NAME', age: 0 });
-
-const user = new Attributes<UserProps>({
-  name: 'Alex',
-  age: 2
+const user = new User({
+  id: 1,
+  name: 'Newwer name',
+  age: 0
 });
 
-console.log(user);
+user.on('save', () => {
+  console.log(user);
+});
+
+user.save();
